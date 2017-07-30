@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+  
+  #ログイン機能のやつ
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+  #resources :users, only: [:new, :create, :destroy]って書いてもok
+
+  #トップページ
   root to: "toppages#index"
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+  
+  #ユーザ登録のやつ
+  get 'signup', to: 'users#new'
+  resources :users, only: [:index, :show, :new, :create]
 end
