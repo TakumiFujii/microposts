@@ -12,4 +12,7 @@ Rails.application.routes.draw do
   #ユーザ登録のやつ
   get 'signup', to: 'users#new'
   resources :users, only: [:index, :show, :new, :create]
+  
+  #投稿のやつ
+  resources :microposts, only: [:create, :destroy]
 end
