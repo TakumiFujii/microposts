@@ -20,10 +20,22 @@ class ApplicationController < ActionController::Base
     !!current_user
   end
   
-  def counts(user)
+  #def counts(user)
+  #  @count_microposts = user.microposts.count
+  #  @count_followings = user.followings.count
+  #  @count_followers = user.followers.count
+  #end
+  
+   #def counts(user)
+   # @count_microposts = user.microposts.count
+   # @count_favorite_microposts = user.favorite_microposts.count
+   #end
+   #上間違えてた、二重でしたらあかんから、あとでじっくり考える。
+   
+   def counts(user)
     @count_microposts = user.microposts.count
     @count_followings = user.followings.count
     @count_followers = user.followers.count
+    @count_favorite_microposts = user.favorite_microposts.count
   end
-  
 end

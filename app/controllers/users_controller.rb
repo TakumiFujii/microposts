@@ -40,6 +40,13 @@ class UsersController < ApplicationController
     @followers = @user.followers.page(params[:page])
     counts(@user)
   end
+  
+  def put_favorite
+    @user = User.find(params[:id])
+    #urlでidもらってくる！
+    #rails routesみろ！:idって書いてるやろ、やからidもうもらっとる、それが入っとる！
+    @favorites = @user.favorite_microposts.page(params[:page])
+  end
 
   private
 

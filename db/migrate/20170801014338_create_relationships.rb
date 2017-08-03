@@ -8,6 +8,7 @@ class CreateRelationships < ActiveRecord::Migration[5.0]
 
       t.timestamps
       t.index [:user_id, :follow_id], unique: true
+      #何でindex? これはおまじない、覚えとけ。
     end
   end
 end
