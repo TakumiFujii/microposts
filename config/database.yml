@@ -58,6 +58,6 @@ test:
   adapter: postgresql
   encoding: unicode
   pool: 5
-  database: taks-microposts_production
-  username: taks-microposts
+  database: microposts_production
+  username: microposts
   password: <%= ENV['MESSAGE-BOARD_DATABASE_PASSWORD'] %>
