@@ -6,7 +6,7 @@ class CreateFavorites < ActiveRecord::Migration[5.0]
 
       t.timestamps
       t.index [:user_id, :micropost_id], unique: true
-    　#何でindex? これはおまじない、覚えとけ。
+    #何でindex? これはおまじない、覚えとけ。
     end
     
   end
