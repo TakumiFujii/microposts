@@ -52,3 +52,4 @@ class User < ApplicationRecord
     self.favorite_microposts.include?(micropost)
   end
 end
+#{"filter":false,"title":"user.rb","tooltip":"/microposts/app/models/user.rb","undoManager":{"mark":-1,"position":-1,"stack":[]},"ace":{"folds":[],"scrolltop":180,"scrollleft":0,"selection":{"start":{"row":6,"column":21},"end":{"row":6,"column":21},"isBackwards":false},"options":{"guessTabSize":true,"useWrapMode":false,"wrapToView":true},"firstLineState":0},"timestamp":1501753586475,"hash":"e2cd7ac23144cc0dc475139738fd1182e6e943c8"}
