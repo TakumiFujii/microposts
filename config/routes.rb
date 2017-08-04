@@ -58,7 +58,7 @@ Rails.application.routes.draw do
   resources :favorites, only: [:create, :destroy]
   
   #フォロー/フォロー解除のやつ
-  resources :relationshps, only: [:create, :destroy]
+  resources :relationships, only: [:create, :destroy]
   
   
   
