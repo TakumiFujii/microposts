@@ -46,9 +46,18 @@ test:
 #
 #   production:
 #     url: <%= ENV['DATABASE_URL'] %>
-#
-production:
-  <<: *default
-  database: microposts_production
-  username: microposts
-  password: <%= ENV['MICROPOSTS_DATABASE_PASSWORD'] %>
+
+#デフォルトであったやつ、一応消さんとコメントアウトしとく
+#production:
+#  <<: *default
+#  database: microposts_production
+#  username: microposts
+#  password: <%= ENV['MICROPOSTS_DATABASE_PASSWORD'] %>
+  
+  production:
+  adapter: postgresql
+  encoding: unicode
+  pool: 5
+  database: taks-microposts_production
+  username: taks-microposts
+  password: <%= ENV['MESSAGE-BOARD_DATABASE_PASSWORD'] %>
